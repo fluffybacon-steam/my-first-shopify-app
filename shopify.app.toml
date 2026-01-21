@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "266004dc12570d1bf84b4ef1bd9a813e"
+client_id = "9334bc1c0ef997be2870d3785f926882"
 name = "my-swiper-slider"
 application_url = "https://example.com"
 embedded = true
@@ -12,17 +12,9 @@ include_config_on_deploy = true
 [webhooks]
 api_version = "2026-04"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
-
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
-
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_metaobjects, read_metaobjects, write_files, read_files"
 
 [auth]
 redirect_urls = [ "https://example.com/api/auth" ]
